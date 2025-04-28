@@ -2,7 +2,7 @@
 n = int(input())
 temp = 0
 
-while(n >= 0):
+while(n > 0):
     temp += 1
     n = n - temp
     
