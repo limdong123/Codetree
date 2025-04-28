@@ -5,9 +5,9 @@ for i in range(n, 100+1):
         print("A",end=" ")
     elif(i >= 80):
         print("B",end=" ")
-    elif(i >= 80):
+    elif(i >= 70):
         print("C",end=" ")
-    elif(i >= 80):
+    elif(i >= 60):
         print("D",end=" ")
     else:
         print("F",end=" ")
