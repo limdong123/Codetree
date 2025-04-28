@@ -1,5 +1,7 @@
 st = input()
 
-st = st.replace(st[1], "a",1)
-st = st.replace(st[-2], "a",1)
-print(st)
+for i in range(len(st)):
+    if(i != 1 and i != len(st)-2):
+        print(st[i],end="")
+    else:
+        print("a", end="")
