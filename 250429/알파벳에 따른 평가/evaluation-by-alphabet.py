@@ -8,7 +8,7 @@ elif(n == 'B'):
     print("Good")
 elif(n == 'C'):
     print("Usually")
-elif(n == 'E'):
+elif(n == 'D'):
     print("Effort")
 else:
     print("Failure")
