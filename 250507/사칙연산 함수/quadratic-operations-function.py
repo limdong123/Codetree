@@ -11,7 +11,7 @@ def minues(a,c):
     print(f"{a} - {c} = {a-c}")
 
 def division(a,c):
-    print(f"{a} / {c} = {a/c:.0f}")
+    print(f"{a} / {c} = {a//c}")
 
 def multi(a,c):
     print(f"{a} * {c} = {a*c}")
