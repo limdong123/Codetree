@@ -7,17 +7,21 @@ M, D = map(int, input().split())
 
 
 def month_day(m,d):
-    if(m == 1,3,5,7,8,10,12):
-        if(d > 31 ):
+    if(1 <= m <= 12):
+        if(day_is_t(m,d)):
+            return True
+    return False
+
+def day_is_t(m,d):
+    if m in [1, 3, 5, 7, 8, 10, 12]:
+        if(d > 31):
             return False
-    elif(m == 4,6,9,11):
+    elif m in [4, 6, 9, 11]:
         if(d > 30):
             return False
-    elif(m == 2):
+    elif m in [2]:
         if(d > 28):
             return False
-    elif(m > 12):
-        return False
     return True
 
 
