@@ -2,18 +2,12 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 # Please write your code here.
-result = 0
 
 def f(n):
-    global result
     if n == -1:
         return 0
 
-
-    if arr[n] > result:
-        result = arr[n]
-    return f(n-1)
+    return max(f(n-1), arr[n])
 
     
-f(n-1)
-print(result)
+print(f(n-1))
