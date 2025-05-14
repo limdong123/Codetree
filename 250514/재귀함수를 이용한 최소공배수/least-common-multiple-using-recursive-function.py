@@ -2,22 +2,22 @@ n = int(input())
 arr = list(map(int, input().split()))
 
 # Please write your code here.
-#arr 최소 공배수 -> arr 전부 곱하고 /2하면서 각 재귀마다 arr나눠지나 확인 
-#안나눠 지면 다음 재귀로 나누워 ㅈ지면 min값에 넣기
+#모든 원소에 대해 n번째 원소부터 첫번쨰 원소까지 비교하며
+#최소공배수를 구해 그 값을 반환하는 재귀함수를 작성하여 해결합니다.
 
-def gcd(a, b):
-    while b != 0:
-        a, b = b, a % b
-    return a
-
-def lcm(a, b):
-    return a * b // gcd(a, b)
-
-def lcm_of_list(arr):
-    result = arr[0]
-    for num in arr[1:]:
-        result = lcm(result, num)
-    return result
+def lcm(a,b): #최소공배수 구하여 반환
+    gcd = 1 #최소공배수
+    for i in range(1, min(a,b) + 1):
+        if a%i == 0 and b % i == 0:
+            gcd = i
+    return a * b // gcd
 
 
-print(lcm_of_list(arr))
+
+def get_lcm_all(index):
+    if index == 1:
+        return arr[1]
+
+    return lcm(get_lcm_all(index-1), arr[index])
+
+print(get_lcm_all(n-1))
