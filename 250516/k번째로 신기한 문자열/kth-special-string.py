@@ -8,7 +8,7 @@ str.sort()
 cnt = 0
 for i in str:
     temp_str = i
-    if temp_str[0:2] == t:
+    if temp_str[0:len(t)] == t:
         cnt += 1
         if cnt == k:
             print(temp_str)
