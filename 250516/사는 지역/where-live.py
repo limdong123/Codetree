@@ -23,7 +23,7 @@ for i in range(n): #클래스에 값 입력
 
 result_idx = 0
 for i in range(1, n): # 클래스 이름 가장 큰 사람 찾기
-    if user[i].name > user[i-1].name:
+    if user[i].name > user[result_idx].name:
         result_idx = i
 
 print(f"name {user[result_idx].name}")
