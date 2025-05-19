@@ -10,8 +10,8 @@ class Student:
 
 students_data = []
 for i in range(n):
-    students_data.append(students[i][0], students[i][1], students[i][2])
+    students_data.append(Student(students[i][0], students[i][1], students[i][2]))
 
 students_data.sort(key = lambda x : (-x.h, -x.w, x.idx))
 for i in range(n):
-    print(f"{students_data[i][0]} {students_data[i][1]} {students_data[i][2]}")
+    print(f"{students_data[i].h} {students_data[i].w} {students_data[i].idx}")
