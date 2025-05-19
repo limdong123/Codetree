@@ -21,4 +21,6 @@ mans = []
 for i in range(n):
     mans.append(Man(name[i], height[i], weight[i]))
 
-print(mans[0].name)
+mans.sort(key = lambda x : x.height)
+for i in range(n):
+    print(f"{mans[i].name} {mans[i].height} {mans[i].weight}")
