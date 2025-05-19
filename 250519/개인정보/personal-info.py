@@ -20,7 +20,7 @@ datas = []
 for i in range(5):
     datas.append(Data(name[i], height[i], weight[i]))
 
-datas.sort(key = lambda x : x.name[0])
+datas.sort(key = lambda x : x.name)
 print("name")
 for i in range(5):
     print(f"{datas[i].name} {datas[i].h} {datas[i].w}")
