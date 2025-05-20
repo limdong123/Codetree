@@ -16,13 +16,12 @@ a_day = month_is(m1, d1)
 b_day = month_is(m2, d2)
 
 result_day = b_day - a_day + 1
-
 result = result_day//7
 result_day %= 7
 
 for i in range(7):
     if days[i] == A:
-        if result_day >= i:
+        if result_day >= i-1:
             result += 1
 
 print(result)
