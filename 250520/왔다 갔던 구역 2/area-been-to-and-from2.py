@@ -17,13 +17,16 @@ for i in range(n):
         for j in range(temp_point, temp_point + x[i]):
             points[j] += 1
         temp_point = temp_point + x[i] 
+        
     else:
-        for j in range(temp_point, temp_point - x[i], -1):
+        for j in range(temp_point - x[i], temp_point):
             points[j] += 1
         temp_point = temp_point - x[i]
-
+        
 cnt = 0
+
 for e in points:
     if e >= 2:
         cnt += 1
+
 print(cnt)
