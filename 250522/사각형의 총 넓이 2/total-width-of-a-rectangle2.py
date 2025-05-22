@@ -9,5 +9,5 @@ for _ in range(n):
 
 # Please write your code here.
 OFFSET =  100
-area = [0,0] * OFFSET
+area = [(0,0) for _ in range(OFFSET)]
 print(area)
