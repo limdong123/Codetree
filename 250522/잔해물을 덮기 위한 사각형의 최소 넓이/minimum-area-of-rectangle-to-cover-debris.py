@@ -19,7 +19,7 @@ for i in range(x1[1] + OFFSET, x2[1] + OFFSET + 1):
 
 
 min_x, max_x, min_y, max_y = 2001, 0, 2001, 0
-
+cnt_0 = 0
 for i in range(len(maps)):
     for j in range(len(maps[i])):
         if maps[i][j] == 1:
@@ -27,5 +27,12 @@ for i in range(len(maps)):
             max_x = max(max_x, i)
             min_y = min(min_y, j)
             max_y = max(max_y, j)
+        else :
+            cnt_0 += 1
 
-print((max_x - min_x) * (max_y - min_y))
+if cnt_0 == maps:
+    print(0)
+else:
+    print((max_x - min_x) * (max_y - min_y))
+
+
