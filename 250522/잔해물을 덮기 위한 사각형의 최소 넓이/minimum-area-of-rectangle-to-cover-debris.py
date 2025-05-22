@@ -9,11 +9,11 @@ OFFSET = 1000
 size = OFFSET * 2
 maps = [[0] * size for _ in range(size)]
 
-for i in range(x1[0] + OFFSET, x2[0] + OFFSET + 1):
+for i in range(x1[0] + OFFSET, x2[0] + OFFSET ):
     for j in range(y1[0] + OFFSET, y2[0] + OFFSET + 1):
         maps[i][j] = 1
 
-for i in range(x1[1] + OFFSET, x2[1] + OFFSET + 1):
+for i in range(x1[1] + OFFSET, x2[1] + OFFSET):
     for j in range(y1[1] + OFFSET, y2[1] + OFFSET + 1):
         maps[i][j] = 0
 
@@ -28,5 +28,5 @@ for i in range(len(maps)):
             min_y = min(min_y, j)
             max_y = max(max_y, j)
 
-print(min_x, max_x, min_y, max_y)
+# print(min_x, max_x, min_y, max_y)
 print((max_x - min_x) * (max_y - min_y))
