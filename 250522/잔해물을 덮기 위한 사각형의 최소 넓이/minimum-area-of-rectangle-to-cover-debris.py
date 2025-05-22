@@ -30,7 +30,7 @@ for i in range(len(maps)):
         else :
             cnt_0 += 1
 
-if cnt_0 == maps:
+if cnt_0 == len(maps)*len(maps[0]):
     print(0)
 else:
     print((max_x - min_x) * (max_y - min_y))
