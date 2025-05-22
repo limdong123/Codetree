@@ -22,7 +22,7 @@ for i in range(n):
                 maps[j] = "G"
             else :
                 maps[j] = "B"
-        temp_point +=  x[i] - 1
+        temp_point = temp_point + x[i] - 1
     else:
         for j in range(temp_point, temp_point - x[i], -1):
             points[j][1] += 1
@@ -30,7 +30,7 @@ for i in range(n):
                 maps[j] = "G"
             else :
                 maps[j] = "W"
-        temp_point -=  x[i] + 1
+        temp_point = temp_point - x[i] + 1
 
 
             #흰, 검, 회
