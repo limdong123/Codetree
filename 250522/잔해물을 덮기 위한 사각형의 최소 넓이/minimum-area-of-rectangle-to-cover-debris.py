@@ -28,4 +28,7 @@ for i in range(len(maps)):
             min_y = min(min_y, j)
             max_y = max(max_y, j)
 
-print((max_x - min_x) * (max_y - min_y))
+
+
+
+print((max_x - min_x) * (max_y - min_y + 1))
