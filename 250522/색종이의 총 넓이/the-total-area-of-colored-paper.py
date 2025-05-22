@@ -9,8 +9,8 @@ OFFSET = 100
 maps = [[0]*OFFSET*2 for _ in range(OFFSET*2)]
 
 for i in range(n):
-    for j in range(x[i], x[i] + 8):
-        for k in range(y[i], y[i] + 8):
+    for j in range(x[i] + OFFSET, x[i] + 8+ OFFSET):
+        for k in range(y[i]+ OFFSET, y[i] + 8+ OFFSET):
             maps[j][k] = 1
 
 result = 0
