@@ -15,14 +15,13 @@ for i in range(n):
             
             a,b,c = arr[i], arr[j], arr[k]
             now_num = a+b+c
-            for _ in range(5):
-                if a%10 + b%10 + c%10 <= 10:
+            for _ in range(4):
+                if a%10 + b%10 + c%10 < 10:
                     a //= 10
                     b //= 10
                     c //= 10
                 else:
                     now_num = 0
-            
             max_num = max(max_num, now_num)
 
 print(max_num)
