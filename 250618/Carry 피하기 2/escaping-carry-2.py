@@ -6,7 +6,7 @@ arr = [int(input()) for _ in range(n)]
 # 각 자릿수의 합이 10이 넘으면 carry발생
 # 각 자릿수의 합이 10이 넘지 않는 것들중 최대값 구하기
 
-max_num = 0
+max_num = -1
 
 #3개 숫자 고르는 배열
 for i in range(n):
