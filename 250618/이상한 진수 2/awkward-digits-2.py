@@ -12,5 +12,6 @@ for i in range(len(a)):
 result = 0
 for i in range(len(a)):
     result += 2**(len(a) - i - 1) * a[i]
+
 print(result)
 
