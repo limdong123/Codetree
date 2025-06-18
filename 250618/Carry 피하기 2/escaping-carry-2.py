@@ -15,7 +15,7 @@ for i in range(n):
             
             a,b,c = arr[i], arr[j], arr[k]
             now_num = a+b+c
-            for _ in range(4):
+            for _ in range(5):
                 if a%10 + b%10 + c%10 <= 10:
                     a //= 10
                     b //= 10
