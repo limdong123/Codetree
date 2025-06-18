@@ -6,65 +6,57 @@ board = [list(map(int, input().split())) for _ in range(19)]
 result = 0
 pointx, pointy = 0, 0
 
-for i in range(19 - 5):
-    for j in range(19 - 5):
+
+def check_win(rock, ci, cj):
+    steps = []
+
+    #세로
+    if 0 + 2 <= ci <= 19 - 2 - 1:
+        cnt = 0
+        for i in range(ci - 2, ci + 2 + 1):
+            if board[i][cj] == rock:
+                cnt += 1
+        steps.append(cnt)
+    #가로
+    if 0 + 2 <= cj <= 19 - 2 - 1:
+        cnt = 0
+        for j in range(cj - 2, cj + 2 + 1):
+            if board[ci][j] == rock:
+                cnt += 1
+        steps.append(cnt)
+
+    #대각 \ / 
+    if 0 + 2 <= ci <= 19 - 2 - 1 and 0 + 2 <= cj <= 19 - 2 - 1:
+        # \
+        cnt = 0 
+        for k in range (-2, 3):
+            if board[ci+k][cj+k] == rock:
+                cnt+=1
+        steps.append(cnt)
+
+        #/
+        cnt = 0
+        for k in range(-2,3):
+            if board[ci+k][cj-k] == rock:
+                cnt+=1
+        steps.append(cnt)
+
+    if 5 in steps:
+        return True
+        
+    
+
+flag = False
+for i in range(19):
+    for j in range(19):
         if board[i][j] != 0:
             rock = board[i][j]
             #가로 세로 대각선 확인
+            if check_win(rock, i, j):
+                flag = True
+                print(rock)
+                print(i+1, j+1)
 
-            ROW, CELL, DIAG, XDIAG = False, False, False, False
+if flag == False:
+    print(0)
             
-            for k in range(1, 5):
-                if rock == board[i][j+k]:
-                    ROW = True
-                else:
-                    ROW = False
-                    break
-            for k in range(1,5):
-                if rock == board[i+k][j]:
-                    CELL = True
-                else : 
-                    CELL = False
-                    break
-            for k in range(1,5):
-                if rock == board[i+k][j+k]:
-                    DIAG = True
-                else :
-                    DIAG = False
-                    break
-
-            for k in range(1,5):
-                if rock == board[i+k][j-k]:
-                    XDIAG = True
-                else :
-                    XDIAG = False
-                    break
-
-            if ROW:
-                result = rock
-                pointx = i 
-                pointy = j + 2
-            elif CELL:
-                result = rock
-                pointx = i + 2
-                pointy = j
-            elif DIAG:
-                result = rock
-                pointx = i + 2
-                pointy = j + 2
-            elif XDIAG:
-                result = rock
-                pointx = i + 2
-                pointy = j - 2
-
-if result == 0 :
-    print(result)
-else :
-    print(result)
-    print(pointx + 1, pointy + 1)
-
-
-            
-
-
-
