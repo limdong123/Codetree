@@ -21,7 +21,7 @@ for i in range(n):
                     b //= 10
                     c //= 10
                 else:
-                    now_num = 0
+                    now_num = -1
             max_num = max(max_num, now_num)
 
 print(max_num)
