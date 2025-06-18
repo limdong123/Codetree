@@ -33,15 +33,15 @@ for i in range(19 - 5):
             if ROW:
                 result = rock
                 pointx = i
-                pointy = j + 2
+                pointy = j
             elif CELL:
                 result = rock
-                pointx = i + 2
+                pointx = i
                 pointy = j
             elif DIAG:
                 result = rock
-                pointx = i + 2
-                pointy = j + 2
+                pointx = i
+                pointy = j
 
 print(result)
 print(pointx + 1, pointy + 1)
