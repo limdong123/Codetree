@@ -4,7 +4,7 @@ board = [list(map(int, input().split())) for _ in range(19)]
 #가로 세로 대각선 확인
 
 result = 0
-pointx, pointy = 1, 1
+pointx, pointy = 0, 0
 
 for i in range(19 - 5):
     for j in range(19 - 5):
@@ -12,7 +12,7 @@ for i in range(19 - 5):
             rock = board[i][j]
             #가로 세로 대각선 확인
 
-            ROW, CELL, DIAG = False, False, False
+            ROW, CELL, DIAG, XDIAG = False, False, False, False
             
             for k in range(1, 5):
                 if rock == board[i][j+k]:
@@ -32,7 +32,14 @@ for i in range(19 - 5):
                 else :
                     DIAG = False
                     break
-            
+
+            for k in range(1,5):
+                if rock == board[i+k][j-k]:
+                    XDIAG = True
+                else :
+                    XDIAG = False
+                    break
+
             if ROW:
                 result = rock
                 pointx = i 
@@ -45,6 +52,10 @@ for i in range(19 - 5):
                 result = rock
                 pointx = i + 2
                 pointy = j + 2
+            elif XDIAG:
+                result = rock
+                pointx = i + 2
+                pointy = j - 2
 
 print(result)
 print(pointx + 1, pointy + 1)
