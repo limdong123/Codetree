@@ -4,7 +4,7 @@ board = [list(map(int, input().split())) for _ in range(19)]
 #가로 세로 대각선 확인
 
 result = 0
-pointx, pointy = 0, 0
+pointx, pointy = 1, 1
 
 for i in range(19 - 5):
     for j in range(19 - 5):
