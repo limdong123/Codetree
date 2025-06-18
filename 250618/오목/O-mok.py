@@ -19,29 +19,32 @@ for i in range(19 - 5):
                     ROW = True
                 else:
                     ROW = False
-                
+                    break
+            for k in range(1,5):
                 if rock == board[i+k][j]:
                     CELL = True
                 else : 
                     CELL = False
-
+                    break
+            for k in range(1,5):
                 if rock == board[i+k][j+k]:
                     DIAG = True
                 else :
                     DIAG = False
+                    break
             
             if ROW:
                 result = rock
-                pointx = i
-                pointy = j
+                pointx = i 
+                pointy = j + 2
             elif CELL:
                 result = rock
-                pointx = i
+                pointx = i + 2
                 pointy = j
             elif DIAG:
                 result = rock
-                pointx = i
-                pointy = j
+                pointx = i + 2
+                pointy = j + 2
 
 print(result)
 print(pointx + 1, pointy + 1)
