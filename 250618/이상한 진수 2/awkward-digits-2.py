@@ -1,6 +1,5 @@
 a = input()
 
-
 # Please write your code here.
 a = list(map(int, a))
 
@@ -13,5 +12,7 @@ result = 0
 for i in range(len(a)):
     result += 2**(len(a) - i - 1) * a[i]
 
+if(len(a) == 1):
+    result = 0
 print(result)
 
