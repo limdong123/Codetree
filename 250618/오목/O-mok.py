@@ -57,8 +57,13 @@ for i in range(19 - 5):
                 pointx = i + 2
                 pointy = j - 2
 
-print(result)
-print(pointx + 1, pointy + 1)
+if result == 0 :
+    print(result)
+else :
+    print(result)
+    print(pointx + 1, pointy + 1)
+
+
             
 
 
